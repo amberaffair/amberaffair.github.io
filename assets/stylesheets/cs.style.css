@@ -1093,16 +1093,16 @@ header#top.affix #umbrella .cart-link:after {
     letter-spacing: 0.09em;
 }
 
-.home-slider-wrapper .camera_caption_1:after,
-.home-slider-wrapper .camera_caption_1:before {
-    content: '';
-    position: absolute;
-    width: 700px;
-    border-bottom: 1px solid #aeaeae;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-}
+/*.home-slider-wrapper .camera_caption_1:after,*/
+/*.home-slider-wrapper .camera_caption_1:before {*/
+/*content: '';*/
+/*position: absolute;*/
+/*width: 700px;*/
+/*border-bottom: 1px solid #aeaeae;*/
+/*left: 0;*/
+/*right: 0;*/
+/*margin: 0 auto;*/
+/*}*/
 
 .home-slider-wrapper .camera_caption_1:after {
     top: 37px;
@@ -6724,12 +6724,84 @@ ul#price-table {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
+    text-shadow: 0px 3px 3px rgba(255, 255, 255, 0.5);
 }
-
 
 #ecwid-shop div.grid__description,
 #ecwid-shop div.grid-category__card,
 #ecwid-shop div.ec-footer {
     font-family: 'Belleza', sans-serif;
+}
+
+.camera_cta_1 a {
+    background-clip: border-box;
+}
+
+.home-slider-wrapper .camera_cta_1 {
+    margin-top: initial;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: black;
+}
+
+#home-banner .home-banner-caption p,
+#home-banner .home-banner-action a {
+    color: black;
+}
+
+.home-banner-wrapper {
+    background-color: #DFDFDD;
+}
+
+.camera02 > div {
+    top: -66%;
+    right: -23%;
+}
+
+.camera05 > div {
+    top: -66%;
+    right: -23%;
+}
+
+.camera03 > div {
+    left: -13%;
+}
+
+.camera04 > div {
+    left: -23%;
+}
+
+.camera06 > div {
+    top: -55%;
+    left: -13%;
+}
+
+.camera06 > div .indent-1 {
+    text-align: start;
+}
+
+.camera06 > div .indent-2 {
+    padding-left: 80%;
+    text-align: start;
+}
+
+.camera06 > div .indent-3 {
+    padding-left: 140%;
+    text-align: start;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-shadow: #FFF 0px 0px 5px,
+    #FFF 0px 0px 10px,
+    #FFF 0px 0px 15px,
+    #FFF 0px 0px 20px,
+    #FFF 0px 0px 30px,
+    #FFF 0px 0px 40px,
+    #FFF 0px 0px 50px,
+    #FFF 0px 0px 75px, 0px 0px 20px rgba(255,255,255,0);
 }
