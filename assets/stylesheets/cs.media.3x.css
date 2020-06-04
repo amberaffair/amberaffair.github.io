@@ -1908,7 +1908,7 @@
     .home-slider-wrapper .camera_caption_1 div,
     .home-slider-wrapper .camera_caption_4 div,
     .home-slider-wrapper .camera_caption_5 div {
-        display: none;
+        /*display: none;*/
     }
 
     .home-slider-wrapper .camera_caption_1:after,
