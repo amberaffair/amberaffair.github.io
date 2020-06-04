@@ -6726,3 +6726,10 @@ ul#price-table {
     background-clip: text;
     text-shadow: 0px 3px 3px rgba(255,255,255,0.5);
 }
+
+
+#ecwid-shop div.grid__description,
+#ecwid-shop div.grid-category__card,
+#ecwid-shop div.ec-footer {
+    font-family: 'Belleza', sans-serif;
+}
