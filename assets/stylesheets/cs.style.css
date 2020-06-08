@@ -972,7 +972,7 @@ header#top.affix #umbrella .cart-link:after {
     color: #ffffff;
     background-color: #362f2d;
     line-height: 50px;
-    letter-spacing: 0.05em;
+    /*letter-spacing: 0.05em;*/
 }
 
 .home-slider-wrapper .camera_title_4,
@@ -1051,7 +1051,7 @@ header#top.affix #umbrella .cart-link:after {
     right: 0;
     width: 100%;
     text-align: center;
-    top: 50%;
+    top: 0;
 }
 
 .camera_caption.camera_title_3 {
@@ -1090,7 +1090,7 @@ header#top.affix #umbrella .cart-link:after {
 .home-slider-wrapper .camera_caption_5 div {
     position: relative;
     font-weight: 400;
-    letter-spacing: 0.09em;
+    /*letter-spacing: 0.09em;*/
 }
 
 /*.home-slider-wrapper .camera_caption_1:after,*/
@@ -1158,7 +1158,7 @@ header#top.affix #umbrella .cart-link:after {
 .home-slider-wrapper .camera_caption_3 div {
     text-transform: initial;
     font-weight: 500;
-    letter-spacing: 0.01em;
+    /*letter-spacing: 0.01em;*/
 }
 
 .camera_caption.camera_image-caption_3 {
@@ -6741,10 +6741,6 @@ ul#price-table {
     margin-top: initial;
 }
 
-h1 {
-    font-size: 40px;
-}
-
 h1, h2, h3, h4, h5, h6 {
     color: black;
 }
@@ -6758,27 +6754,33 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #DFDFDD;
 }
 
+.camera_caption > div {
+    display: inline-block;
+    position: absolute !important;
+    top: 50%;
+    padding: 0;
+}
+
 .camera02 > div {
-    top: -66%;
-    right: -23%;
+    right: 20%;
+    top: 20%;
 }
 
 .camera05 > div {
-    top: -66%;
-    right: -23%;
+
 }
 
 .camera03 > div {
-    left: -13%;
+
 }
 
 .camera04 > div {
-    left: -23%;
+
 }
 
 .camera06 > div {
-    top: -55%;
-    left: -13%;
+    right: 20%;
+    top: 20%;
 }
 
 .camera06 > div .indent-1 {
@@ -6786,16 +6788,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .camera06 > div .indent-2 {
-    padding-left: 80%;
+    margin-left: 20rem;
     text-align: start;
 }
 
 .camera06 > div .indent-3 {
-    padding-left: 140%;
+    margin-left: 32rem;
     text-align: start;
 }
 
 h1, h2, h3, h4, h5, h6 {
+
     text-shadow: #FFF 0px 0px 5px,
     #FFF 0px 0px 10px,
     #FFF 0px 0px 15px,
@@ -6803,5 +6806,45 @@ h1, h2, h3, h4, h5, h6 {
     #FFF 0px 0px 30px,
     #FFF 0px 0px 40px,
     #FFF 0px 0px 50px,
-    #FFF 0px 0px 75px, 0px 0px 20px rgba(255,255,255,0);
+    #FFF 0px 0px 75px, 0px 0px 20px rgba(255, 255, 255, 0);
+
+    display: inline-block;
+}
+
+.home-slider-wrapper {
+    letter-spacing: 0.2rem;
+}
+
+.center {
+    display: inline-block;
+    transform: translate(-50%, -50%);
+}
+
+.camera_wrap {
+    font-size: 1.2vw;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
+}
+
+
+h3 {
+    font-size: 1.6em;
+}
+
+h4 {
+    font-size: 1.4em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1em;
 }
