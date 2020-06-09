@@ -6826,25 +6826,38 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
     font-size: 2em;
+    line-height: 2.6em;
+    /*line-height: 3.2360675em;*/
 }
+
 
 h2 {
     font-size: 1.8em;
+    line-height: 2.34em;
+    /*line-height: 2.91246075em;*/
 }
 
 
 h3 {
     font-size: 1.6em;
+    line-height: 2.08em;
+    /*line-height: 2.588854em;*/
 }
 
 h4 {
     font-size: 1.4em;
+    line-height: 1.82em;
+    /*line-height: 2.26524725em;*/
 }
 
 h5 {
     font-size: 1.2em;
+    line-height: 1.56em;
+    /*line-height: 1.9416405em;*/
 }
 
 h6 {
     font-size: 1em;
+    line-height: 1.3em;
+    /*line-height: 1.61803375em;*/
 }
