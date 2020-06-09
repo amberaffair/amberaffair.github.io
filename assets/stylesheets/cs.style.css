@@ -1329,7 +1329,8 @@ h6.general-title:before {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 50% 80%;
-    background-size: 140%;
+    /*background-size: 140%;*/
+    background-size: contain;
 }
 
 #home-banner img.img-banner-caption {
