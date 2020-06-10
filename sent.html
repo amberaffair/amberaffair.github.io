@@ -29,14 +29,14 @@
     <link href="./assets/stylesheets/cs.media.3x.css" rel="stylesheet"
           type="text/css" media="all">
 
-    <script src="./assets/javascripts/jquery-1.9.1.min.js"
-            type="text/javascript"></script>
-    <script src="./assets/javascripts/bootstrap.min.3x.js"
-            type="text/javascript"></script>
-    <script src="./assets/javascripts/jquery.gmap.min.js"
-            type="text/javascript"></script>
-    <script src="./assets/javascripts/maps-google.js"
-            type="text/javascript"></script>
+    <!--<script src="./assets/javascripts/jquery-1.9.1.min.js"-->
+            <!--type="text/javascript"></script>-->
+    <!--<script src="./assets/javascripts/bootstrap.min.3x.js"-->
+            <!--type="text/javascript"></script>-->
+    <!--<script src="./assets/javascripts/jquery.gmap.min.js"-->
+            <!--type="text/javascript"></script>-->
+    <!--<script src="./assets/javascripts/maps-google.js"-->
+            <!--type="text/javascript"></script>-->
 </head>
 
 <body itemscope="" itemtype="https://schema.org/WebPage"
@@ -385,25 +385,22 @@
                                 </div>
                             </div>
                         </div>
-                        <div id="contact_map_wrapper">
-                            <div id="contact_map" class="map"></div>
-                            <script>
-                                if (jQuery().gMap) {
-                                    if ($('#contact_map').length) {
-                                        $('#contact_map').gMap({
-                                            zoom: 17,
-                                            scrollwheel: false,
-                                            maptype: 'ROADMAP',
-                                            markers: [
-                                                {
-                                                    address: '249 Ung Văn Khiêm, phường 25, Ho Chi Minh City, Vietnam',
-                                                    html: '_address'
-                                                }
-                                            ]
-                                        });
-                                    }
-                                }
-                            </script>
+                        <div class="home-banner-wrapper">
+                            <div class="container">
+                                <div id="home-banner" class="text-center clearfix">
+                                    <img class="pulse img-banner-caption"
+                                         src="./assets/images/logo-big.png"
+                                         alt="">
+                                    <div class="home-banner-caption">
+                                        <p>
+                                            inspired by nature
+                                        </p>
+                                    </div>
+                                    <div class="home-banner-action">
+                                        <a href="./shop.html">Shop Now</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
