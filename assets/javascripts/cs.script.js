@@ -76,7 +76,7 @@ function alwaysUpdateZoom(){
       });
       
       
-        //pass the images to Fancybox
+        /*//pass the images to Fancybox
         $(".elevatezoom .img-zoom").bind("click", function(e) {  
           var ez =   $('.elevatezoom .img-zoom').data('elevateZoom');	
           $.fancybox(ez.getGalleryList(),{
@@ -86,7 +86,7 @@ function alwaysUpdateZoom(){
             }
           });
           return false;
-        });
+        });*/
       
     }
     
@@ -128,152 +128,7 @@ function handleAnimate(){
     });
   }
 }
-      
-function handleLogin(){
-  $("#loginBox input").focus(function() {
-    $(this).parents('#loginBox').addClass('focus');
-  }).blur(function() {
-    $(this).parents('#loginBox').removeClass('focus');
-  });
-}
- 
-// handle scroll-to-top button
-function handleScrollTop() {
-  
-  function totop_button(a) {
-    var b = $("#scroll-to-top");
-    b.removeClass("off on");
-    if (a == "on") { b.addClass("on") } else { b.addClass("off") }
-  }
-  
-  $(window).scroll(function() {
-    var b = $(this).scrollTop();
-    var c = $(this).height();
-    if (b > 0) { 
-      var d = b + c / 2;
-    } 
-    else { 
-      var d = 1 ;
-    }
-    
-    if (d < 1e3 && d < c) { 
-      totop_button("off");
-    } 
-    else {
-      
-      totop_button("on"); 
-    }
-  });
-  
-  $("#scroll-to-top").click(function (e) {
-    e.preventDefault();
-    $('body,html').animate({scrollTop:0},800,'swing');
-  });
-}
-      
-/* Function update scroll product thumbs */
-function updateScrollThumbs(){
-  if($('#gallery_main').length){
-    
-    if(touch){
-      $('#product-image .main-image').on('click', function() {
-        var _items = [];
-        var _index = 0;
-        var product_images = $('#product-image .image-thumb');
-        product_images.each(function(key, val) {
-          _items.push({'href' : val.href, 'title' : val.title});
-          if($(this).hasClass('active')){
-            _index = key;
-          }
-        });
-        $.fancybox(_items,{
-          closeBtn: false,
-          index: _index,
-          openEffect: 'none',
-          closeEffect: 'none',
-          nextEffect: 'none',
-          prevEffect: 'none',
-          helpers: {
-            buttons: {}
-          }
-        });
-        return false;
-      });
-    }
-    else{
-      
-    }
 
-    $('#product-image').on('click', '.image-thumb', function() {
-
-      var $this = $(this);
-      var background = $('.product-image .main-image .main-image-bg');
-      var parent = $this.parents('.product-image-wrapper');
-      var src_original = $this.attr('data-image-zoom');
-      var src_display = $this.attr('data-image');
-      
-      background.show();
-      
-      parent.find('.image-thumb').removeClass('active');
-      $this.addClass('active');
-      
-      parent.find('.main-image').find('img').attr('data-zoom-image', src_original);
-      parent.find('.main-image').find('img').attr('src', src_display).load(function() {
-        background.hide();
-      });
-      
-      return false;
-    });
-  }
-}
-    
-/* Function update scroll product thumbs */
-function updateScrollThumbsQS(){
-  if($('#gallery_main_qs').length){
-    
-    $('#quick-shop-image .fancybox').on(clickEv, function() {
-      var _items = [];
-      var _index = 0;
-      var product_images = $('#gallery_main_qs .image-thumb');
-      product_images.each(function(key, val) {
-        _items.push({'href' : val.href, 'title' : val.title});
-        if($(this).hasClass('active')){
-          _index = key;
-        }
-      });
-      $.fancybox(_items,{
-        closeBtn: true,
-        index: _index,
-        helpers: {
-          buttons: {}
-        }
-      });
-      return false;
-    });
-
-    $('#quick-shop-image').on(clickEv, '.image-thumb', function() {
-
-      var $this = $(this);
-      var background = $('.product-image .main-image .main-image-bg');
-      var parent = $this.parents('.product-image-wrapper');
-      var src_original = $this.attr('data-image-zoom');
-      var src_display = $this.attr('data-image');
-      
-      background.show();
-      
-      parent.find('.image-thumb').removeClass('active');
-      $this.addClass('active');
-      
-      parent.find('.main-image').find('img').attr('data-zoom-image', src_original);
-      parent.find('.main-image').find('img').attr('src', src_display).load(function() {
-        background.hide();
-      });
-      
-      return false;
-    });
-  }
-}
-    
 /* Handle Carousel */
 function handleCarousel(){
 
@@ -307,366 +162,6 @@ function handleCarousel(){
       // 	fx: 'mosaicRandom'
       //   });
   }
-  
-  /* Handle Popular Collections */
-  if($('#home_collections').length){
-    imagesLoaded('#home_collections', function() {
-      $("#home_collections").owlCarousel({
-        navigation : true,
-        pagination: false,
-        autoPlay: true,
-        stopOnHover: true,
-        items: 4,
-        itemsDesktop : [1199,4],
-        itemsDesktopSmall : [979,3],
-        itemsTablet: [768,3],
-        itemsTabletSmall: [540,2],
-        itemsMobile : [360,1],
-        scrollPerPage: true,
-        navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>'],
-        afterInit: function(elem){
-          if(touch == false){
-          elem.find('.btooltip').tooltip();
-          }
-        }
-      });
-    });
-  }
-  
-  /* Handle Promotion */
-  if($('#home_promotion').length){
-    imagesLoaded('#home_promotion', function() {
-      $("#home_promotion").owlCarousel({
-        navigation : true,
-        pagination: true,
-        autoPlay: true,
-        stopOnHover: true,
-        items: 1,
-        itemsDesktop : [1199,1],
-        itemsDesktopSmall : [979,1],
-        itemsTablet: [768,1],
-        itemsTabletSmall: [540,1],
-        itemsMobile : [360,1],
-        scrollPerPage: true,
-        navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>']
-      });
-    });
-  }
-  
-  /* Handle Popular Partners */
-  if($('#partners').length){
-    imagesLoaded('#partners', function() {
-      $("#partners").owlCarousel({
-        navigation : true,
-        pagination: false,
-        autoPlay: true,
-        stopOnHover: true,
-        items: 6,
-        itemsDesktop : [1199,6],
-        itemsDesktopSmall : [979,5],
-        itemsTablet: [768,4],
-        itemsTabletSmall: [540,3],
-        itemsMobile : [360,2],
-        scrollPerPage: true,
-        navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>'],
-        afterInit: function(elem){
-          if(touch == false){
-          elem.find('.btooltip').tooltip();
-          }
-        }
-      });
-    });
-  }
-  
-  /* Handle Featured Products */
-  if($('#home_fp').length){
-    imagesLoaded('#home_fp', function() {
-      $("#home_fp").owlCarousel({
-        navigation : true,
-        pagination: false,
-        autoPlay: true,
-        stopOnHover: true,
-        items: 4,
-        itemsDesktop : [1199,4],
-        itemsDesktopSmall : [979,3],
-        itemsTablet: [768,3],
-        itemsTabletSmall: [540,2],
-        itemsMobile : [360,1],
-        scrollPerPage: true,
-        navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>'],
-        afterInit: function(elem){
-          if(touch == false){
-          elem.find('.btooltip').tooltip();
-          }
-        }
-      });
-    });
-  }
-  
-  /* Handle Moreview in Quickview */
-  if($('#gallery_main_qs').length){
-    imagesLoaded('#gallery_main_qs', function() {
-      $("#gallery_main_qs").owlCarousel({
-        navigation : true,
-        pagination: false,
-        autoPlay: true,
-        stopOnHover: true,
-        items: 4,
-        itemsDesktop : [1199,4],
-        itemsDesktopSmall : [979,3],
-        itemsTablet: [768,3],
-        itemsTabletSmall: [540,2],
-        itemsMobile : [360,1],
-        scrollPerPage: true,
-        navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>'],
-        afterInit: function(elem){
-          if(touch == false){
-          elem.find('.btooltip').tooltip();
-          }
-        }
-      });
-    });
-  }
-  /* Handle product thumbs */
-  
-  $('.full_width .slide-product-image').bxSlider({
-    mode: 'vertical',
-    slideWidth: 100,
-    minSlides: 4,
-    nextText: '<i class="fa fa-chevron-down btooltip" title="down"></i>',
-    prevText: '<i class="fa fa-chevron-up btooltip" title="up"></i>',
-    hideControlOnEnd: true,
-    infiniteLoop: false,
-    pager: false,
-    slideMargin: 0,
-    adaptiveHeight:true
-  });
-
-  /* Handle gallery products mobile full*/
-  if($(".mobile_full_width .slide-product-image").length){
-    $(".mobile_full_width .slide-product-image").owlCarousel({
-      navigation : true,
-      pagination: false,
-      items: 4,
-      slideSpeed : 200,
-      paginationSpeed : 800,
-      rewindSpeed : 1000,
-      itemsDesktop : [1199,4],
-      itemsDesktopSmall : [979,4],
-      itemsTablet: [768,4],
-      itemsTabletSmall: [540,3],
-      itemsMobile : [360,3],
-      touchDrag:true,
-      //scrollPerPage: true,
-      navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>']
-    });
-  }
-  
-  /* Handle gallery products no full*/
-  if($(".no_full_width .slide-product-image").length){
-    $(".no_full_width .slide-product-image").owlCarousel({
-      navigation : true,
-      pagination: false,
-      items: 4,
-      slideSpeed : 200,
-      paginationSpeed : 800,
-      rewindSpeed : 1000,
-      itemsDesktop : [1199,4],
-      itemsDesktopSmall : [979,4],
-      itemsTablet: [768,4],
-      itemsTabletSmall: [540,3],
-      itemsMobile : [360,3],
-      //scrollPerPage: true,
-      navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>']
-    });
-  }
-  
-  /* Handle related products */
-  if($(".prod-related").length){
-    if($("#col-main").hasClass("no_full_width")){
-      $(".prod-related").owlCarousel({
-        navigation : true,
-        pagination: false,
-        items: 3,
-        slideSpeed : 200,
-        paginationSpeed : 800,
-        rewindSpeed : 1000,
-        itemsDesktop : [1199,3],
-        itemsDesktopSmall : [979,3],
-        itemsTablet: [768,2],
-        itemsTabletSmall: [540,2],
-        itemsMobile : [360,1],
-        //scrollPerPage: true,
-        navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>'],
-        beforeMove: function(elem) {
-          if(touch == false){
-            var items = elem.find('.not-animated');
-            items.removeClass('not-animated').unbind('appear');
-          }
-        },
-        afterInit: function(elem){
-          if(touch == false){
-          elem.find('.btooltip').tooltip();
-          }
-        }
-      });
-    }
-    else{
-      $(".prod-related").owlCarousel({
-        navigation : true,
-        pagination: false,
-        items: 4,
-        slideSpeed : 200,
-        paginationSpeed : 800,
-        rewindSpeed : 1000,
-        itemsDesktop : [1199,4],
-        itemsDesktopSmall : [979,3],
-        itemsTablet: [768,2],
-        itemsTabletSmall: [540,2],
-        itemsMobile : [360,1],
-        //scrollPerPage: true,
-        navigationText: ['<span class="btooltip" title="Previous"></span>', '<span class="btooltip" title="Next"></span>'],
-        beforeMove: function(elem) {
-          if(touch == false){
-            var items = elem.find('.not-animated');
-            items.removeClass('not-animated').unbind('appear');
-          }
-        },
-        afterInit: function(elem){
-          if(touch == false){
-          elem.find('.btooltip').tooltip();
-          }
-        }
-      });
-    }
-  }
-}
-
-/* Handle search box on mobile */
-function callbackSearch(){
-   $('.header-search i').mouseup(function(search){
-     $(this).parent().find('.search-form').addClass('focus');
-   });
-  
-  $('.header-search i').mouseup(function(search){
-     if(!($(search.target).parent().find('.search-form').length > 0)) {
-      $(this).parent().find('.search-form').removeClass('focus');
-    }
-   });
-  
-}
-/* Handle search box on pc */
-function handleBoxSearch(){
-  if($('#header-search input').length){
-    $('#header-search input').focus(function() {
-      $(this).parent().addClass('focus');
-    }).blur(function() {
-      $(this).parent().removeClass('focus');
-    });
-  }
-}
-    
-/* Handle Map with GMap */
-function handleMap(){
-  if(jQuery().gMap){
-    if($('#contact_map').length){
-      $('#contact_map').gMap({
-        zoom: 17,
-        scrollwheel: false,
-        maptype: 'ROADMAP',
-        markers:[
-          {
-            address: '249 Ung Văn Khiêm, phường 25, Ho Chi Minh City, Vietnam',
-            html: '_address'
-          }
-        ]
-      });
-    }
-  }
-}
-    
-/* Handle Grid - List */
-function handleGridList(){
-  if($('#goList').length){
-    $('#goList').on(clickEv, function(e){
-      $(this).parent().find('li').removeClass('active');
-      $(this).addClass('active');
-      
-      $('#sandBox .element').removeClass('no_full_width');
-      $('#sandBox .element').addClass('full_width');
-      $('#sandBox .element .row-left').addClass('col-md-8');
-      //$('#sandBox .element .row-left').addClass('col-sm-8');
-      $('#sandBox .element .row-right').addClass('col-md-16');
-      //$('#sandBox .element .row-right').addClass('col-sm-16');
-      
-      $('#sandBox').isotope('reLayout');
-      if(clickEv == 'touchstart'){
-      $(this).click();
-      return true;
-    }
-      
-    });
-  }
-  
-  if($('#goGrid').length){
-    $('#goGrid').on(clickEv, function(e){
-      $(this).parent().find('li').removeClass('active');
-      $(this).addClass('active');
-      
-      $('#sandBox .element').removeClass('full_width');
-      $('#sandBox .element').addClass('no_full_width');
-      $('#sandBox .element .row-left').removeClass('col-md-8');
-      //$('#sandBox .element .row-left').removeClass('col-sm-8');
-      $('#sandBox .element .row-right').removeClass('col-md-16');
-      //$('#sandBox .element .row-right').removeClass('col-sm-16');
-      
-      $('#sandBox').isotope('reLayout');
-      if(clickEv == 'touchstart'){
-      $(this).click();
-      return true;
-    }
-      
-    });
-  }
-}
-function handleGridListajax(){
-  if($('#goList').length){
-    $('#goList').on(clickEv, function(e){
-      $(this).parent().find('li').removeClass('active');
-      $(this).addClass('active');
-      
-      $('#sandBox .element').removeClass('no_full_width');
-      $('#sandBox .element').addClass('full_width');
-      $('#sandBox .element .row-left').addClass('col-md-8');
-      //$('#sandBox .element .row-left').addClass('col-sm-8');
-      $('#sandBox .element .row-right').addClass('col-md-16');
-      //$('#sandBox .element .row-right').addClass('col-sm-16');
-      if(clickEv == 'touchstart'){
-      $(this).click();
-      return true;
-    }
-      
-    });
-  }
-  
-  if($('#goGrid').length){
-    $('#goGrid').on(clickEv, function(e){
-      $(this).parent().find('li').removeClass('active');
-      $(this).addClass('active');
-      
-      $('#sandBox .element').removeClass('full_width');
-      $('#sandBox .element').addClass('no_full_width');
-      $('#sandBox .element .row-left').removeClass('col-md-8');
-      //$('#sandBox .element .row-left').removeClass('col-sm-8');
-      $('#sandBox .element .row-right').removeClass('col-md-16');
-      //$('#sandBox .element .row-right').removeClass('col-sm-16');
-      if(clickEv == 'touchstart'){
-      $(this).click();
-      return true;
-    }
-      
-    });
-  }
 }
 
 /* Handle detect platform */
@@ -694,100 +189,14 @@ function handleDetectPlatform(){
     }
   }
 }
-    
-/* Handle tooltip */
-function handleToolTip(){
-  if(touch == false){
-    if($('.btooltip').length){
-      $('.btooltip').tooltip();
-    }
-  }
-}
-    
-/* Handle product quantity */
-function handleQuantity(){
-  if($('.quantity-wrapper').length){
-    $('.quantity-wrapper').on(clickEv, '.qty-up', function() {
-      var $this = $(this);
-      
-      var qty = $this.data('src');
-      $(qty).val(parseInt($(qty).val()) + 1);
-    });
-    $('.quantity-wrapper').on(clickEv, '.qty-down', function() {
-      var $this = $(this);
-      
-      var qty = $this.data('src');
-      
-      if(parseInt($(qty).val()) > 1)
-        $(qty).val(parseInt($(qty).val()) - 1);
-    });
-  }
-}
-    
+
+
 /* Handle sidebar */
 function handleSidebar(){
   /* Add class first, last in sidebar */
   if($('.sidebar').length){
     $('.sidebar').children('.row-fluid').first().addClass('first');
     $('.sidebar').children('.row-fluid').last().addClass('last');
-  }
-}
-    
-/* Handle sort by */
-function handleSortBy(){
-  if($('#sortForm li.sort').length){
-    $('#sortForm li.sort').click(function(){
-      
-      var button = $('#sortButton');
-      var box = $('#sortBox');
-      
-      $('#sortButton .name').html($(this).html());
-      
-      button.removeClass('active');
-      box.hide().parent().removeClass('open');
-    });
-  }
-}
-    
-/* Handle dropdown box */
-function handleDropdown(){
-  if($('.dropdown-toggle').length){
-    $('.dropdown-toggle').parent().hover(function (){
-      if(touch == false && getWidthBrowser() > 767 ){
-        $(this).find('.dropdown-menu').stop(true, true).slideDown(300);
-      }
-    }, function (){
-      if(touch == false && getWidthBrowser() > 767 ){
-        $(this).find('.dropdown-menu').hide();
-      }
-    });
-  }
-  
-  $('nav .dropdown-menu').each(function(){
-    $(this).find('li').last().addClass('last');
-  });
-  
-  $('.dropdown').on('click', function() {
-      if(touch == false && getWidthBrowser() > 767 ){
-        var href = $(this).find('.dropdown-link').attr('href');
-        window.location = href;
-    }
-  });
-  
-  $('.cart-link').on('click', function() {
-      if(touch == false && getWidthBrowser() > 767 ){
-        var href = $(this).find('.dropdown-link').attr('href');
-        window.location = href;
-    }
-  });
-}
-    
-/* Handle collection tags */
-function handleCollectionTags(){
-  if($('#collection_tags').length){
-    $('#collection_tags').on('change', function() {
-      window.location = $(this).val();
-    });
   }
 }
 
@@ -813,12 +222,12 @@ function top_other(){
 }
 
 /* handle when window loaded */
-$(window).load(function() {
-  if(touch == false){
-    skrollr.init();
-  }
-
-});
+// $(window).load(function() {
+//   if(touch == false){
+//     skrollr.init();
+//   }
+//
+// });
 
 jQuery(document).ready(function($) {
 	 
@@ -845,19 +254,7 @@ jQuery(document).ready(function($) {
        
   if ($.cookie('topother')) {}
   else{  $('.top-other').show(); }
-    
-  /*Popup tabs panel on detail page*/
-  $('#tabs_detail .fancybox').fancybox({
-    'autoDimensions'    : false,
-    'width'             : 850,
-    'height'            : 'auto',
-    'autoSize' : false,
 
-    beforeShow: function(){
-      $(".fancybox-skin").css("background-image","none");
-      $(".fancybox-skin").css("background-color","#fff");
-    }
-  }); 
      
   /* SwitchImage */
   $('#product .thumbs a').on('click', function(e) {
@@ -871,41 +268,18 @@ jQuery(document).ready(function($) {
   
   /* DETECT PLATFORM */
   handleDetectPlatform();
-  
-  
+
   /* Handle Animate */
   handleAnimate();
   
   /* Handle Carousel */
   handleCarousel();
   
-  /* Handle search box on pc */
-  handleBoxSearch();
-  
-  /* Handle focus */
-  handleLogin();
-  
-
-  /* Handle scroll to top */
-  handleScrollTop();
-  
-  /* Handle dropdown box */
-  handleDropdown();
-  
-  /* Handle tooltip */
-  handleToolTip();
-  
-  /* Handle Map with GMap */
-  handleMap();
-  
   /* Handle sidebar */
   handleSidebar();
   
   /* Handle zoom for product image */
   alwaysUpdateZoom();
-  
-  /* Handle quantity */
-  handleQuantity();
   
   /* Handle product thumbs */
   if(touch){
@@ -914,16 +288,6 @@ jQuery(document).ready(function($) {
   else{
     
   }
-
-  /* Handle sort by */
-  handleSortBy();
-     
-     
-  /* Handle grid - list */
-  handleGridList();
-  
-  /* Handle collection tags */ 
-  handleCollectionTags();
      
   $('.dropdown-menu').on(clickEv, function (e) {
     e.stopPropagation();
