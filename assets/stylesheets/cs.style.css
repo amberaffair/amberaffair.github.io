@@ -6785,12 +6785,9 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-/*.camera06 > div {*/
-    /*left: auto;*/
-    /*right: 0;*/
-    /*top: 0;*/
-    /*width: auto;*/
-/*}*/
+.camera06 > div {
+  top: 30%
+}
 
 /*.camera06 > div .indent-1 {*/
     /*text-align: start;*/
@@ -6909,7 +6906,4 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 0;
     height: auto;
     margin: 1em;
-}
-.h4 {
-
 }
