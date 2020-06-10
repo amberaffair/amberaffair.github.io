@@ -1040,9 +1040,9 @@ header#top.affix #umbrella .cart-link:after {
 .home-slider-wrapper .camera_mc_1,
 .home-slider-wrapper .camera_mc_5,
 .home-slider-wrapper .camera_mc_2,
-/*.home-slider-wrapper .camera_cta_1,*/
-/*.home-slider-wrapper .camera_cta_2,*/
-/*.home-slider-wrapper .camera_cta_5,*/
+    /*.home-slider-wrapper .camera_cta_1,*/
+    /*.home-slider-wrapper .camera_cta_2,*/
+    /*.home-slider-wrapper .camera_cta_5,*/
 .camera_caption.camera_image-caption_1,
 .camera_caption.camera_image-caption_2,
 .camera_caption.camera_image-caption_5 {
@@ -6786,28 +6786,34 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .camera06 > div {
-  top: 30%
+    top: 30%
 }
 
 .camera05 > div {
-    top: 40%
+    left: 44%;
+    top: 22%;
+}
+
+.camera05 * {
+    text-align: end !important;
 }
 
 .camera04 > div {
-    top: 40%
+    top: 45%
 }
+
 /*.camera06 > div .indent-1 {*/
-    /*text-align: start;*/
+/*text-align: start;*/
 /*}*/
 
 /*.camera06 > div .indent-2 {*/
-    /*margin-left: 9em;*/
-    /*text-align: start;*/
+/*margin-left: 9em;*/
+/*text-align: start;*/
 /*}*/
 
 /*.camera06 > div .indent-3 {*/
-    /*margin-left: 16em;*/
-    /*text-align: start;*/
+/*margin-left: 16em;*/
+/*text-align: start;*/
 /*}*/
 
 .indent-4 {
@@ -6863,14 +6869,12 @@ h1 {
     /*line-height: 3.2360675em;*/
 }
 
-
 h2 {
     font-size: 1.8em;
     line-height: 1.6em;
     /*line-height: 2.34em;*/
     /*line-height: 2.91246075em;*/
 }
-
 
 h3 {
     font-size: 1.6em;
