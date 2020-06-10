@@ -6789,6 +6789,13 @@ h1, h2, h3, h4, h5, h6 {
   top: 30%
 }
 
+.camera05 > div {
+    top: 40%
+}
+
+.camera04 > div {
+    top: 40%
+}
 /*.camera06 > div .indent-1 {*/
     /*text-align: start;*/
 /*}*/
