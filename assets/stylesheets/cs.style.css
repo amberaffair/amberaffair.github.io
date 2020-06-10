@@ -6802,6 +6802,10 @@ h1, h2, h3, h4, h5, h6 {
     top: 45%
 }
 
+.camera07 > div {
+    left: 70%
+}
+
 /*.camera06 > div .indent-1 {*/
 /*text-align: start;*/
 /*}*/
