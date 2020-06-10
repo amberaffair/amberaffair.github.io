@@ -279,7 +279,8 @@ function handleCarousel(){
 
   /* Handle main slideshow */
   if($('#home-slider').length){
-    var k = (0.6*$(window).innerWidth())+'px';
+    //var k = (0.6*$(window).innerWidth())+'px';
+      var k = '66%';
     $('#home-slider').camera({
         height: k,
         time:2000,
