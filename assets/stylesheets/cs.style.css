@@ -6764,6 +6764,10 @@ h1, h2, h3, h4, h5, h6 {
     width: 66%;
 }
 
+.camera01 > div {
+    left: 40%;
+}
+
 .camera02 > div {
     right: 20%;
     top: 20%;
@@ -6781,24 +6785,29 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
-.camera06 > div {
-    left: auto;
-    right: 0;
-    top: 0;
-    width: auto;
-}
+/*.camera06 > div {*/
+    /*left: auto;*/
+    /*right: 0;*/
+    /*top: 0;*/
+    /*width: auto;*/
+/*}*/
 
-.camera06 > div .indent-1 {
-    text-align: start;
-}
+/*.camera06 > div .indent-1 {*/
+    /*text-align: start;*/
+/*}*/
 
-.camera06 > div .indent-2 {
-    margin-left: 9em;
-    text-align: start;
-}
+/*.camera06 > div .indent-2 {*/
+    /*margin-left: 9em;*/
+    /*text-align: start;*/
+/*}*/
 
-.camera06 > div .indent-3 {
-    margin-left: 16em;
+/*.camera06 > div .indent-3 {*/
+    /*margin-left: 16em;*/
+    /*text-align: start;*/
+/*}*/
+
+.indent-4 {
+    margin-left: 6em;
     text-align: start;
 }
 
@@ -6891,6 +6900,7 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     text-transform: initial;
     margin: 0;
+    padding: 0 !important;
 }
 
 .home-slider-wrapper .camera_cta_1 a {
@@ -6898,8 +6908,8 @@ h1, h2, h3, h4, h5, h6 {
     padding: 1.5em !important;
     line-height: 0;
     height: auto;
+    margin: 1em;
 }
-
 .h4 {
 
 }
