@@ -279,23 +279,32 @@ function handleCarousel(){
 
   /* Handle main slideshow */
   if($('#home-slider').length){
-    var k;
-    if($(window),innerWidth>=1200)
-      k = $(window).innerHeight()+'px';
-    else
-      if($(window),innerWidth>=768)
-        k = "50%";
-      else
-        k = "30%";
-      $('#home-slider').camera({
+    var k = (0.6*$(window).innerWidth())+'px';
+    $('#home-slider').camera({
         height: k,
-		time:2000,
-		pagination: false,
+        time:2000,
+        pagination: false,
         thumbnails: false,
         autoAdvance: true,
         playPause: false,
-		fx: 'mosaicRandom'
-      });
+        fx: 'mosaicRandom'
+    });
+    // if($(window).innerWidth>=1200)
+      //   k = $(window).innerHeight()+'px';
+      // else
+      //   if($(window).innerWidth>=768)
+      //     k = "50%";
+      //   else
+      //     k = "30%";
+      //   $('#home-slider').camera({
+      //     height: k,
+      // 	time:2000,
+      // 	pagination: false,
+      //     thumbnails: false,
+      //     autoAdvance: true,
+      //     playPause: false,
+      // 	fx: 'mosaicRandom'
+      //   });
   }
   
   /* Handle Popular Collections */

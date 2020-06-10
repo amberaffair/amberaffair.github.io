@@ -1040,9 +1040,9 @@ header#top.affix #umbrella .cart-link:after {
 .home-slider-wrapper .camera_mc_1,
 .home-slider-wrapper .camera_mc_5,
 .home-slider-wrapper .camera_mc_2,
-.home-slider-wrapper .camera_cta_1,
-.home-slider-wrapper .camera_cta_2,
-.home-slider-wrapper .camera_cta_5,
+/*.home-slider-wrapper .camera_cta_1,*/
+/*.home-slider-wrapper .camera_cta_2,*/
+/*.home-slider-wrapper .camera_cta_5,*/
 .camera_caption.camera_image-caption_1,
 .camera_caption.camera_image-caption_2,
 .camera_caption.camera_image-caption_5 {
@@ -1050,7 +1050,7 @@ header#top.affix #umbrella .cart-link:after {
     left: 0;
     right: 0;
     width: 100%;
-    text-align: center;
+    /*text-align: center;*/
     top: 0;
 }
 
@@ -6759,7 +6759,9 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-block;
     position: absolute !important;
     top: 50%;
+    left: 50%;
     padding: 0;
+    width: 66%;
 }
 
 .camera02 > div {
@@ -6780,8 +6782,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .camera06 > div {
-    right: 20%;
-    top: 20%;
+    left: auto;
+    right: 0;
+    top: 0;
+    width: auto;
 }
 
 .camera06 > div .indent-1 {
@@ -6821,44 +6825,81 @@ h1, h2, h3, h4, h5, h6 {
     transform: translate(-50%, -50%);
 }
 
+.center * {
+    text-align: center;
+}
+
+.top-right {
+    padding: 4vw;
+}
+
 .camera_wrap {
-    font-size: 1.2vw;
+    font-size: 1.8vw;
+}
+
+@media (min-width: 1200px) {
+    .camera_wrap {
+        font-size: 24px;
+    }
 }
 
 h1 {
     font-size: 2em;
-    line-height: 2.6em;
+    line-height: 1.6em;
+    /*line-height: 2.6em;*/
     /*line-height: 3.2360675em;*/
 }
 
 
 h2 {
     font-size: 1.8em;
-    line-height: 2.34em;
+    line-height: 1.6em;
+    /*line-height: 2.34em;*/
     /*line-height: 2.91246075em;*/
 }
 
 
 h3 {
     font-size: 1.6em;
-    line-height: 2.08em;
+    line-height: 1.6em;
+    /*line-height: 2.08em;*/
     /*line-height: 2.588854em;*/
 }
 
 h4 {
     font-size: 1.4em;
-    line-height: 1.82em;
+    line-height: 1.6em;
+    /*line-height: 1.82em;*/
     /*line-height: 2.26524725em;*/
 }
 
 h5 {
     font-size: 1.2em;
-    line-height: 1.56em;
+    line-height: 1.6em;
+    /*line-height: 1.56em;*/
     /*line-height: 1.9416405em;*/
 }
 
 h6 {
     font-size: 1em;
-    line-height: 1.3em;
+    line-height: 1.6em;
+    /*line-height: 1.3em;*/
     /*line-height: 1.61803375em;*/
+}
+
+h1, h2, h3, h4, h5, h6 {
+    display: block;
+    text-transform: initial;
+    margin: 0;
+}
+
+.home-slider-wrapper .camera_cta_1 a {
+    font-size: 1.2em;
+    padding: 1.5em !important;
+    line-height: 0;
+    height: auto;
+}
+
+.h4 {
+
 }

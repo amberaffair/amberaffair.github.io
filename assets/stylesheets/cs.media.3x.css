@@ -1081,15 +1081,15 @@
     .home-slider-wrapper .camera_title_1 a,
     .home-slider-wrapper .camera_title_2 a,
     .home-slider-wrapper .camera_title_3 a {
-        font-size: 45px;
-        line-height: 45px;
+        /*font-size: 45px;*/
+        /*line-height: 45px;*/
     }
 
     .home-slider-wrapper .camera_caption_1 div,
     .home-slider-wrapper .camera_caption_2 div,
     .home-slider-wrapper .camera_caption_3 div {
-        font-size: 12px;
-        line-height: 14px;
+        /*font-size: 12px;*/
+        /*line-height: 14px;*/
     }
 
     .top-navigation {
@@ -1721,7 +1721,7 @@
     .home-slider-wrapper .camera_caption_1 div,
     .home-slider-wrapper .camera_caption_4 div,
     .home-slider-wrapper .camera_caption_5 div {
-        font-size: 13px;
+        /*font-size: 13px;*/
     }
 
     .home_products .element form .row-right a.title-5 {
@@ -1787,7 +1787,7 @@
     .home-slider-wrapper .camera_caption_1 div,
     .home-slider-wrapper .camera_caption_4 div,
     .home-slider-wrapper .camera_caption_5 div {
-        font-size: 11px;
+        /*font-size: 11px;*/
     }
 
     .element form .row-left button.wish-list,
@@ -2149,7 +2149,7 @@
     .home-slider-wrapper .camera_title_3 a,
     .home-slider-wrapper .camera_title_4 a,
     .home-slider-wrapper .camera_title_5 a {
-        font-size: 30px;
+        /*font-size: 30px;*/
     }
 
     .camera_wrap .camera_caption img {
@@ -2348,8 +2348,8 @@
     .home-slider-wrapper .camera_title_1 a,
     .home-slider-wrapper .camera_title_2 a,
     .home-slider-wrapper .camera_title_3 a {
-        font-size: 20px;
-        line-height: 20px;
+        /*font-size: 20px;*/
+        /*line-height: 20px;*/
     }
 
     #home_products .element.no_full_width {
