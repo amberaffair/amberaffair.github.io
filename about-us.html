@@ -150,33 +150,33 @@
             </ul>
         </div>
         <!--End Navigation-->
-        <script>
-            function addaffix(scr) {
-                if ($(window).innerWidth() >= 1024) {
-                    if (scr > $('#top').innerHeight()) {
-                        if (!$('#top').hasClass('affix')) {
-                            $('#top').addClass('affix').addClass('animated');
-                        }
-                    }
-                    else {
-                        if ($('#top').hasClass('affix')) {
-                            $('#top').prev().remove();
-                            $('#top').removeClass('affix').removeClass('animated');
-                        }
-                    }
-                }
-                else $('#top').removeClass('affix');
-            }
+        <!--<script>-->
+            <!--function addaffix(scr) {-->
+                <!--if ($(window).innerWidth() >= 1024) {-->
+                    <!--if (scr > $('#top').innerHeight()) {-->
+                        <!--if (!$('#top').hasClass('affix')) {-->
+                            <!--$('#top').addClass('affix').addClass('animated');-->
+                        <!--}-->
+                    <!--}-->
+                    <!--else {-->
+                        <!--if ($('#top').hasClass('affix')) {-->
+                            <!--$('#top').prev().remove();-->
+                            <!--$('#top').removeClass('affix').removeClass('animated');-->
+                        <!--}-->
+                    <!--}-->
+                <!--}-->
+                <!--else $('#top').removeClass('affix');-->
+            <!--}-->
 
-            $(window).scroll(function () {
-                var scrollTop = $(this).scrollTop();
-                addaffix(scrollTop);
-            });
-            $(window).resize(function () {
-                var scrollTop = $(this).scrollTop();
-                addaffix(scrollTop);
-            });
-        </script>
+            <!--$(window).scroll(function () {-->
+                <!--var scrollTop = $(this).scrollTop();-->
+                <!--addaffix(scrollTop);-->
+            <!--});-->
+            <!--$(window).resize(function () {-->
+                <!--var scrollTop = $(this).scrollTop();-->
+                <!--addaffix(scrollTop);-->
+            <!--});-->
+        <!--</script>-->
     </div>
 </header>
 
